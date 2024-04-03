@@ -20,6 +20,17 @@ module SassC
     end
 
     def render
+      puts "AAAAAAAAAAAAAAAAAAA"
+      puts "AAAAAAAAAAAAAAAAAAA"
+      puts "AAAAAAAAAAAAAAAAAAA"
+      puts "AAAAAAAAAAAAAAAAAAA"
+      puts "AAAAAAAAAAAAAAAAAAA"
+      puts "AAAAAAAAAAAAAAAAAAA"
+      puts "AAAAAAAAAAAAAAAAAAA"
+      puts "AAAAAAAAAAAAAAAAAAA"
+      puts "AAAAAAAAAAAAAAAAAAA"
+      puts "AAAAAAAAAAAAAAAAAAA"
+      
       return @template.dup if @template.empty?
 
       data_context = Native.make_data_context(@template)
