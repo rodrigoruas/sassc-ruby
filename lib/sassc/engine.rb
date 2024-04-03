@@ -20,17 +20,6 @@ module SassC
     end
 
     def render
-      puts "AAAAAAAAAAAAAAAAAAA"
-      puts "AAAAAAAAAAAAAAAAAAA"
-      puts "AAAAAAAAAAAAAAAAAAA"
-      puts "AAAAAAAAAAAAAAAAAAA"
-      puts "AAAAAAAAAAAAAAAAAAA"
-      puts "AAAAAAAAAAAAAAAAAAA"
-      puts "AAAAAAAAAAAAAAAAAAA"
-      puts "AAAAAAAAAAAAAAAAAAA"
-      puts "AAAAAAAAAAAAAAAAAAA"
-      puts "AAAAAAAAAAAAAAAAAAA"
-      
       return @template.dup if @template.empty?
 
       data_context = Native.make_data_context(@template)
@@ -57,6 +46,10 @@ module SassC
         message = Native.context_get_error_message(context)
         filename = Native.context_get_error_file(context)
         line = Native.context_get_error_line(context)
+
+        puts Native
+
+        binding.pry
 
         raise SyntaxError.new(message, filename: filename, line: line)
       end
